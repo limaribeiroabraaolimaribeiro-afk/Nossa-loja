@@ -1,303 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nossa Loja</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #f5f7fb;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(135deg, #111827, #1f2937);
-      color: white;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #60a5fa;
-    }
-
-    .hero {
-      min-height: 80vh;
-      background: linear-gradient(rgba(17,24,39,0.65), rgba(17,24,39,0.65)),
-        url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80') center/cover;
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 0 8%;
-    }
-
-    .hero-content {
-      max-width: 650px;
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 14px 24px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 70px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #111827;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 18px;
-    }
-
-    .card-content h3 {
-      margin-bottom: 10px;
-      color: #111827;
-    }
-
-    .price {
-      color: #2563eb;
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .about,
-    .ideas {
-      background: white;
-      border-radius: 20px;
-      padding: 35px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    }
-
-    .ideas ul {
-      margin-top: 15px;
-      padding-left: 20px;
-    }
-
-    .ideas li {
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      text-align: center;
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
-      border-radius: 20px;
-      padding: 50px 30px;
-    }
-
-    .contact p {
-      margin: 15px 0 25px;
-      font-size: 1.05rem;
-    }
-
-    footer {
-      background: #111827;
-      color: #cbd5e1;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 2.2rem;
-      }
-
-      nav {
-        margin-top: 10px;
-      }
-
-      nav a {
-        margin: 0 10px 0 0;
-        display: inline-block;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Nexa Store</title>
 </head>
 <body>
+    <div class="topo">
+    <h1 class="logo">Nexa Store</h1>
 
-  <header>
-    <h1>Nossa Loja</h1>
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#ideias">Ideias</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+    <main style="
+        display: flex; 
+        align-items: center; 
+        border: 1px solid #000; 
+        border-radius: 12px; 
+        padding: 8px 12px; 
+        width: 400px; 
+        font-family: sans-serif;
+        background-color: #a58e8e;
+    ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
 
-  <section class="hero" id="inicio">
-    <div class="hero-content">
-      <h2>Construindo a nossa loja online juntos</h2>
-      <p>
-        Este é um modelo inicial para nós começar a desenvolver a identidade,
-        os produtos e a proposta da loja. A ideia é servir como base para novas ideias.
-      </p>
-      <a href="#produtos" class="btn">Ver produtos</a>
+        <input type="text" placeholder="Buscar" style="
+            border: none; 
+            outline: none; 
+            margin-left: 10px; 
+            flex-grow: 1; 
+            font-size: 16px;
+            background: transparent;
+            color: #000;
+        ">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor: pointer;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </main>
+</div>
+
+
+    <div class="caixa"><!-- Botão de Início/Casa -->
+    <button class="home" style="background: none; border: none; cursor: pointer; padding: 8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
+    </button>
+
+    <button class="menssege" style="background: none; border: none; cursor: pointer; padding: 8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+        </svg>
+    </button>
+
+    <!-- Botão com ícone de Mensagem/Chat -->
+    <button class="carrinho" style="background: none; border: none; cursor: pointer; padding: 8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+        </svg>
+    </button>
+
+    <button class="sininho" style="background: none; border: none; cursor: pointer; padding: 8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+        </svg>
+    </button>
+
+    <button class="usuario" style="background: none; border: none; cursor: pointer; padding: 8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+    </button>
     </div>
-  </section>
-
-  <section id="produtos">
-    <h2 class="section-title">Produtos em destaque</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Produto 1">
-        <div class="card-content">
-          <h3>Camiseta Premium</h3>
-          <p>Produto exemplo para vocês editarem com nome, descrição e preço reais.</p>
-          <div class="price">R$ 59,90</div>
-          <a href="#" class="btn">Comprar</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" alt="Produto 2">
-        <div class="card-content">
-          <h3>Tênis Casual</h3>
-          <p>Área dos produtos que realmente irão vender.</p>
-          <div class="price">R$ 149,90</div>
-          <a href="#" class="btn">Comprar</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Produto 3">
-        <div class="card-content">
-          <h3>Jaqueta Estilo Urbano</h3>
-          <p>Modelo visual para dar ideia de como a loja pode ficar organizada.</p>
-          <div class="price">R$ 199,90</div>
-          <a href="#" class="btn">Comprar</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre">
-    <h2 class="section-title">Sobre a loja</h2>
-    <div class="about">
-      <p>
-        A <strong>Nossa Loja</strong> é um projeto criado por amigos com o objetivo de
-        transformar ideias em um negócio real. Aqui vocês podem apresentar a história
-        da marca, o estilo dos produtos e o diferencial da loja.
-      </p>
-      <br>
-      <p>
-        Exemplos de coisas para definir:
-        nome oficial da loja, identidade visual, público-alvo, categoria dos produtos,
-        forma de entrega, meios de pagamento e presença no Instagram/WhatsApp.
-      </p>
-    </div>
-  </section>
-
-  <section id="ideias">
-    <h2 class="section-title">Área de ideias</h2>
-    <div class="ideas">
-      <p>Vocês podem usar esta seção para anotar e evoluir o projeto:</p>
-      <ul>
-        <li>Definir o nome final da loja</li>
-        <li>Escolher as cores oficiais da marca</li>
-        <li>Decidir quais produtos vender primeiro</li>
-        <li>Montar promoções de lançamento</li>
-        <li>Criar Instagram e identidade visual</li>
-        <li>Planejar fotos reais dos produtos</li>
-        <li>Adicionar carrinho e sistema de pedidos futuramente</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contato">
-    <div class="contact">
-      <h2>Vamos tirar esse projeto do papel?</h2>
-      <p>
-        Esta área pode virar o contato oficial da loja com botão para WhatsApp,
-        Instagram, formulário ou e-mail.
-      </p>
-      <a href="https://wa.me/5500000000000" class="btn" target="_blank">Falar no WhatsApp</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Nossa Loja - Projeto em desenvolvimento por amigos</p>
-  </footer>
 
 </body>
 </html>
