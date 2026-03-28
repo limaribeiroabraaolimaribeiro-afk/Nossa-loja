@@ -1,0 +1,92 @@
+body {
+    background: #000;
+    margin: 20px 0;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.topo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #2a2a2a;
+}
+
+.logo {
+    display: inline-block;
+    width: max-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin: 20px 0;
+
+    background: linear-gradient(
+        90deg,
+        #9719b6 0%,
+        #7d1fff 45%,
+        #5c50ff 63%,
+        #41a2ff 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.caixa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100vh;
+    background: #000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 25px;
+    padding-top: 120px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.caixa::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 124px;
+    bottom: 0;
+    width: 1px;
+    background: #2a2a2a;
+}
+
+.caixa button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa svg {
+    width: 30px;
+    height: 30px;
+}
